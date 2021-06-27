@@ -1,5 +1,7 @@
 package com.xe.jkapp;
 
+import android.app.ActionBar;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -30,8 +32,13 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        //设置顶部导航条
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        //设置底部导航条
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        //设置导航颜色
+
     }
 
 }
