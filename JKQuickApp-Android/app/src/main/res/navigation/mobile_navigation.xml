@@ -10,7 +10,33 @@
         android:id="@+id/navigation_home"
         android:name="com.xe.jkapp.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_second_page"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            app:destination="@id/action_second_pagefragment"></action>
+    </fragment>
+
+    <!--    首页-第二个页面-->
+    <fragment android:id="@+id/action_second_pagefragment"
+        android:name="com.xe.jkapp.ui.home.SecondPageFragment"
+        android:label="SecondPageFragment"
+        tools:layout="@layout/fragment_second_page">
+        <action android:id="@+id/action_three_page"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            app:destination="@id/action_three_pagefragment"></action>
+    </fragment>
+    <!--    首页-第三个页面-->
+    <fragment android:id="@+id/action_three_pagefragment"
+        android:name="com.xe.jkapp.ui.home.ThreePageFragment"
+        android:label="ThreePageFragment"
+        tools:layout="@layout/fragment_three_page">
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"

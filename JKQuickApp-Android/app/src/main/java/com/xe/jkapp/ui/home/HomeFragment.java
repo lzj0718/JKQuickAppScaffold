@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.xe.jkapp.R;
 import com.xe.jkapp.databinding.FragmentHomeBinding;
@@ -35,6 +37,13 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        binding.goSecondBtn.setOnClickListener(new Button.OnClickListener(){
+
+            public void onClick(View v) { //使用匿名的Button实例
+                Navigation.findNavController(v).navigate(R.id.action_second_page);
+            } }
+        ) ;
+
         return root;
     }
 
@@ -43,4 +52,5 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }
