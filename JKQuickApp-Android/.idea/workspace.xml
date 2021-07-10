@@ -192,18 +192,22 @@
     </state>
     <state x="612" y="0" key="SettingsEditor/0.0.1792.1044@0.0.1792.1044" timestamp="1625405691704" />
     <state x="612" y="0" key="SettingsEditor/0.0.1792.1059@0.0.1792.1059" timestamp="1625899761331" />
+    <state x="520" y="389" width="597" height="490" key="find.popup" timestamp="1625903496415">
+      <screen x="0" y="0" width="1792" height="1060" />
+    </state>
+    <state x="520" y="389" width="597" height="490" key="find.popup/0.0.1792.1060@0.0.1792.1060" timestamp="1625903496415" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/xe/jkapp/MainActivity.java</url>
-          <line>61</line>
+          <line>60</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/xe/jkapp/MainActivity.java</url>
-          <line>63</line>
+          <line>62</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         //设置顶部导航条
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        //设置底部导航条
+        //设置绑定底部菜单BottomNavigation -  Navigation ；fragment id 需要与menu item id 一一对应
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         //控制顶部bottom隐藏
