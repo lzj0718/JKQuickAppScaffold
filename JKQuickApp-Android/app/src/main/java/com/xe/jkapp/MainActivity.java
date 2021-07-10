@@ -68,19 +68,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void showBottomView(){
-            if (!isShowBottomNav) {
-                binding.navView.setVisibility(View.VISIBLE);
-                ObjectAnimator.ofFloat(binding.navView, "translationY", binding.navView.getHeight(), 0).setDuration(250).start();
-                isShowBottomNav = true;
-            }
+    private void showBottomView() {
+        if (!isShowBottomNav) {
+            binding.navView.setVisibility(View.VISIBLE);
+            ObjectAnimator.ofFloat(binding.navView, "translationY", binding.navView.getHeight(), 0).setDuration(250).start();
+            isShowBottomNav = true;
+        }
     }
 
-    private void hideBottomNav(){
-            if (isShowBottomNav) {
-                ObjectAnimator.ofFloat(binding.navView, "translationY", 0, binding.navView.getHeight()).setDuration(250).start();
-                isShowBottomNav = false;
-            }
+    private void hideBottomNav() {
+        if (isShowBottomNav) {
+            ObjectAnimator.ofFloat(binding.navView, "translationY", 0, binding.navView.getHeight()).setDuration(250).start();
+            isShowBottomNav = false;
+        }
     }
 
 
