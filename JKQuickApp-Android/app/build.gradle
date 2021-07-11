@@ -29,6 +29,24 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    sourceSets {
+        main {
+            //指定so文件的目录
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    //引入本地aar库
+    compile(name: 'JKCacheLib-debug', ext: 'aar')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
 }
 
 dependencies {
@@ -44,4 +62,5 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
 }
