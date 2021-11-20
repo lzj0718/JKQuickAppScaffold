@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = ViewController()
+        let tabbarVC = JKTabbarVC()
+        
+        window?.rootViewController = tabbarVC
         return true
     }
 
