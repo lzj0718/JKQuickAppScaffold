@@ -18,6 +18,9 @@
 		85C9F7EB2748C21A000E684F /* JKUserCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7EA2748C21A000E684F /* JKUserCenterVC.swift */; };
 		85C9F7F82748D5C4000E684F /* JKLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7F72748D5C4000E684F /* JKLoadingView.swift */; };
 		85C9F7FE2748DBE0000E684F /* JKHomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7FD2748DBE0000E684F /* JKHomeTableCell.swift */; };
+		85C9F8062748E945000E684F /* JKFlutterEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F8052748E945000E684F /* JKFlutterEngine.swift */; };
+		85C9F8092748E9D6000E684F /* JKFlutterMethodChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F8082748E9D6000E684F /* JKFlutterMethodChannel.swift */; };
+		85C9F80C2748EB79000E684F /* JKFlutterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F80B2748EB79000E684F /* JKFlutterAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		85C9F7EA2748C21A000E684F /* JKUserCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKUserCenterVC.swift; sourceTree = "<group>"; };
 		85C9F7F72748D5C4000E684F /* JKLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKLoadingView.swift; sourceTree = "<group>"; };
 		85C9F7FD2748DBE0000E684F /* JKHomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKHomeTableCell.swift; sourceTree = "<group>"; };
+		85C9F8052748E945000E684F /* JKFlutterEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterEngine.swift; sourceTree = "<group>"; };
+		85C9F8082748E9D6000E684F /* JKFlutterMethodChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterMethodChannel.swift; sourceTree = "<group>"; };
+		85C9F80B2748EB79000E684F /* JKFlutterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterAdapter.swift; sourceTree = "<group>"; };
 		8D4424B9A6C2ABD685A44D60 /* Pods-JKQuickApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKQuickApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-JKQuickApp-iOS/Pods-JKQuickApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		996D4719F2A393F2D8679114 /* Pods_JKQuickApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKQuickApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DB67C446E27DB014E8CB76 /* Pods-JKQuickApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKQuickApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-JKQuickApp-iOS/Pods-JKQuickApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 		5C2341B5268D711E006F9D11 /* JKQuickApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				85C9F8042748E8B6000E684F /* Flutter */,
 				85C9F7C62748BFCB000E684F /* View */,
 				85C9F7C12748BF7B000E684F /* Controller */,
 				5C2341B6268D711E006F9D11 /* AppDelegate.swift */,
@@ -100,6 +107,7 @@
 		85C9F7C12748BF7B000E684F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				85C9F8032748E440000E684F /* Flutter */,
 				85C9F7D62748C08D000E684F /* Base */,
 				85C9F7E22748C1BA000E684F /* Login */,
 				85C9F7DF2748C157000E684F /* Tabbars */,
@@ -189,6 +197,23 @@
 			children = (
 			);
 			path = Center;
+			sourceTree = "<group>";
+		};
+		85C9F8032748E440000E684F /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		85C9F8042748E8B6000E684F /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				85C9F8052748E945000E684F /* JKFlutterEngine.swift */,
+				85C9F8082748E9D6000E684F /* JKFlutterMethodChannel.swift */,
+				85C9F80B2748EB79000E684F /* JKFlutterAdapter.swift */,
+			);
+			path = Flutter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,10 +331,13 @@
 				85C9F7E42748C1CF000E684F /* JKLoginVC.swift in Sources */,
 				85C9F7D92748C0B4000E684F /* JKTabbarVC.swift in Sources */,
 				85C9F7F82748D5C4000E684F /* JKLoadingView.swift in Sources */,
+				85C9F8062748E945000E684F /* JKFlutterEngine.swift in Sources */,
 				85C9F7DD2748C0F8000E684F /* JKBaseVC.swift in Sources */,
 				85C9F7DA2748C0B4000E684F /* JKNavigationVC.swift in Sources */,
 				5C2341B7268D711E006F9D11 /* AppDelegate.swift in Sources */,
+				85C9F80C2748EB79000E684F /* JKFlutterAdapter.swift in Sources */,
 				85C9F7FE2748DBE0000E684F /* JKHomeTableCell.swift in Sources */,
+				85C9F8092748E9D6000E684F /* JKFlutterMethodChannel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
