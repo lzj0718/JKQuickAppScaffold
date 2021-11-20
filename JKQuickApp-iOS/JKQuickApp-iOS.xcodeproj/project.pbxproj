@@ -10,13 +10,14 @@
 		48419F548F4FFC21F5426FBB /* Pods_JKQuickApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996D4719F2A393F2D8679114 /* Pods_JKQuickApp_iOS.framework */; };
 		5C2341B7268D711E006F9D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2341B6268D711E006F9D11 /* AppDelegate.swift */; };
 		5C2341C0268D7120006F9D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2341BF268D7120006F9D11 /* Assets.xcassets */; };
-		85C9F7C82748BFE5000E684F /* JKLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7C72748BFE5000E684F /* JKLoadingView.swift */; };
 		85C9F7D92748C0B4000E684F /* JKTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7D72748C0B4000E684F /* JKTabbarVC.swift */; };
 		85C9F7DA2748C0B4000E684F /* JKNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7D82748C0B4000E684F /* JKNavigationVC.swift */; };
 		85C9F7DD2748C0F8000E684F /* JKBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7DC2748C0F8000E684F /* JKBaseVC.swift */; };
 		85C9F7E42748C1CF000E684F /* JKLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7E32748C1CF000E684F /* JKLoginVC.swift */; };
 		85C9F7E82748C1FD000E684F /* JKHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7E72748C1FD000E684F /* JKHomeVC.swift */; };
 		85C9F7EB2748C21A000E684F /* JKUserCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7EA2748C21A000E684F /* JKUserCenterVC.swift */; };
+		85C9F7F82748D5C4000E684F /* JKLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7F72748D5C4000E684F /* JKLoadingView.swift */; };
+		85C9F7FE2748DBE0000E684F /* JKHomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7FD2748DBE0000E684F /* JKHomeTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,13 +25,14 @@
 		5C2341B6268D711E006F9D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C2341BF268D7120006F9D11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2341C4268D7120006F9D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85C9F7C72748BFE5000E684F /* JKLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLoadingView.swift; sourceTree = "<group>"; };
 		85C9F7D72748C0B4000E684F /* JKTabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKTabbarVC.swift; sourceTree = "<group>"; };
 		85C9F7D82748C0B4000E684F /* JKNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKNavigationVC.swift; sourceTree = "<group>"; };
 		85C9F7DC2748C0F8000E684F /* JKBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBaseVC.swift; sourceTree = "<group>"; };
 		85C9F7E32748C1CF000E684F /* JKLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKLoginVC.swift; sourceTree = "<group>"; };
 		85C9F7E72748C1FD000E684F /* JKHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKHomeVC.swift; sourceTree = "<group>"; };
 		85C9F7EA2748C21A000E684F /* JKUserCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKUserCenterVC.swift; sourceTree = "<group>"; };
+		85C9F7F72748D5C4000E684F /* JKLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKLoadingView.swift; sourceTree = "<group>"; };
+		85C9F7FD2748DBE0000E684F /* JKHomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKHomeTableCell.swift; sourceTree = "<group>"; };
 		8D4424B9A6C2ABD685A44D60 /* Pods-JKQuickApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKQuickApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-JKQuickApp-iOS/Pods-JKQuickApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		996D4719F2A393F2D8679114 /* Pods_JKQuickApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKQuickApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DB67C446E27DB014E8CB76 /* Pods-JKQuickApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKQuickApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-JKQuickApp-iOS/Pods-JKQuickApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +110,10 @@
 		85C9F7C62748BFCB000E684F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85C9F7C72748BFE5000E684F /* JKLoadingView.swift */,
+				85C9F7F52748D5AB000E684F /* Base */,
+				85C9F7F62748D5AB000E684F /* Center */,
+				85C9F7F32748D5AB000E684F /* Home */,
+				85C9F7F42748D5AB000E684F /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +161,36 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		85C9F7F32748D5AB000E684F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				85C9F7FD2748DBE0000E684F /* JKHomeTableCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		85C9F7F42748D5AB000E684F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		85C9F7F52748D5AB000E684F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				85C9F7F72748D5C4000E684F /* JKLoadingView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		85C9F7F62748D5AB000E684F /* Center */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Center;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +202,7 @@
 				5C2341AF268D711E006F9D11 /* Sources */,
 				5C2341B0268D711E006F9D11 /* Frameworks */,
 				5C2341B1268D711E006F9D11 /* Resources */,
+				37D04313688AF2B39F69C29E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +279,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		37D04313688AF2B39F69C29E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JKQuickApp-iOS/Pods-JKQuickApp-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -253,11 +304,12 @@
 				85C9F7EB2748C21A000E684F /* JKUserCenterVC.swift in Sources */,
 				85C9F7E82748C1FD000E684F /* JKHomeVC.swift in Sources */,
 				85C9F7E42748C1CF000E684F /* JKLoginVC.swift in Sources */,
-				85C9F7C82748BFE5000E684F /* JKLoadingView.swift in Sources */,
 				85C9F7D92748C0B4000E684F /* JKTabbarVC.swift in Sources */,
+				85C9F7F82748D5C4000E684F /* JKLoadingView.swift in Sources */,
 				85C9F7DD2748C0F8000E684F /* JKBaseVC.swift in Sources */,
 				85C9F7DA2748C0B4000E684F /* JKNavigationVC.swift in Sources */,
 				5C2341B7268D711E006F9D11 /* AppDelegate.swift in Sources */,
+				85C9F7FE2748DBE0000E684F /* JKHomeTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

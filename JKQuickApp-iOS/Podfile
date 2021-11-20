@@ -10,6 +10,7 @@ target 'JKQuickApp-iOS' do
   
   use_frameworks!
     
+    pod 'SnapKit', '~> 5.0.1'
  # Json数据解析
   #pod 'SwiftyJSON', '~> 4.0'
 
