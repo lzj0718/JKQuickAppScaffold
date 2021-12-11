@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import SnapKit
+import Flutter
 
 class JKHomeVC: JKBaseVC{
     
@@ -66,6 +66,8 @@ extension JKHomeVC : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       print(indexPath.row)
+     
+        let flutterViewController = JKFlutterAdapter.shared.generatorFlutterVC(JKFlutterEventTestVC.self)
+        navigationController?.pushViewController(flutterViewController, animated: true)
     }
 }

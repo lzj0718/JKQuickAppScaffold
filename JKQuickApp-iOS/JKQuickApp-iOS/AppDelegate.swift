@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Flutter
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window : UIWindow?
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -21,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabbarVC = JKTabbarVC()
         
         window?.rootViewController = tabbarVC
+        
+        //flutter 相关测试代码
+        JKFlutterAdapter.shared.setupFlutterAdapter()
+        
         return true
     }
 

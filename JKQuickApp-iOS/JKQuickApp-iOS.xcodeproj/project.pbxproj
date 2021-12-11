@@ -10,6 +10,12 @@
 		48419F548F4FFC21F5426FBB /* Pods_JKQuickApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996D4719F2A393F2D8679114 /* Pods_JKQuickApp_iOS.framework */; };
 		5C2341B7268D711E006F9D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2341B6268D711E006F9D11 /* AppDelegate.swift */; };
 		5C2341C0268D7120006F9D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2341BF268D7120006F9D11 /* Assets.xcassets */; };
+		85C3DCF3275CB6E4005EABA3 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C9F845275CAD63000E684F /* App.framework */; };
+		85C3DCF4275CB6E5005EABA3 /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85C9F845275CAD63000E684F /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85C3DCF6275CB6E7005EABA3 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C9F844275CAD63000E684F /* Flutter.framework */; };
+		85C3DCF7275CB6E7005EABA3 /* Flutter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85C9F844275CAD63000E684F /* Flutter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85C3DCF9275CB929005EABA3 /* JKFlutterEventTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3DCF8275CB929005EABA3 /* JKFlutterEventTestVC.swift */; };
+		85C3DCFB275CB9BB005EABA3 /* FlutterViewControllerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3DCFA275CB9BB005EABA3 /* FlutterViewControllerGenerator.swift */; };
 		85C9F7D92748C0B4000E684F /* JKTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7D72748C0B4000E684F /* JKTabbarVC.swift */; };
 		85C9F7DA2748C0B4000E684F /* JKNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7D82748C0B4000E684F /* JKNavigationVC.swift */; };
 		85C9F7DD2748C0F8000E684F /* JKBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F7DC2748C0F8000E684F /* JKBaseVC.swift */; };
@@ -23,11 +29,28 @@
 		85C9F80C2748EB79000E684F /* JKFlutterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F80B2748EB79000E684F /* JKFlutterAdapter.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		85C3DCF5275CB6E5005EABA3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				85C3DCF4275CB6E5005EABA3 /* App.framework in Embed Frameworks */,
+				85C3DCF7275CB6E7005EABA3 /* Flutter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5C2341B3268D711E006F9D11 /* JKQuickApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JKQuickApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2341B6268D711E006F9D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C2341BF268D7120006F9D11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2341C4268D7120006F9D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C3DCF8275CB929005EABA3 /* JKFlutterEventTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterEventTestVC.swift; sourceTree = "<group>"; };
+		85C3DCFA275CB9BB005EABA3 /* FlutterViewControllerGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterViewControllerGenerator.swift; sourceTree = "<group>"; };
 		85C9F7D72748C0B4000E684F /* JKTabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKTabbarVC.swift; sourceTree = "<group>"; };
 		85C9F7D82748C0B4000E684F /* JKNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKNavigationVC.swift; sourceTree = "<group>"; };
 		85C9F7DC2748C0F8000E684F /* JKBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKBaseVC.swift; sourceTree = "<group>"; };
@@ -39,6 +62,8 @@
 		85C9F8052748E945000E684F /* JKFlutterEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterEngine.swift; sourceTree = "<group>"; };
 		85C9F8082748E9D6000E684F /* JKFlutterMethodChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterMethodChannel.swift; sourceTree = "<group>"; };
 		85C9F80B2748EB79000E684F /* JKFlutterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterAdapter.swift; sourceTree = "<group>"; };
+		85C9F844275CAD63000E684F /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Flutter.framework; sourceTree = "<group>"; };
+		85C9F845275CAD63000E684F /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = App.framework; sourceTree = "<group>"; };
 		8D4424B9A6C2ABD685A44D60 /* Pods-JKQuickApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKQuickApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-JKQuickApp-iOS/Pods-JKQuickApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		996D4719F2A393F2D8679114 /* Pods_JKQuickApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKQuickApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DB67C446E27DB014E8CB76 /* Pods-JKQuickApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKQuickApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-JKQuickApp-iOS/Pods-JKQuickApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +75,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				48419F548F4FFC21F5426FBB /* Pods_JKQuickApp_iOS.framework in Frameworks */,
+				85C3DCF6275CB6E7005EABA3 /* Flutter.framework in Frameworks */,
+				85C3DCF3275CB6E4005EABA3 /* App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +113,7 @@
 		5C2341B5268D711E006F9D11 /* JKQuickApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				85C9F843275CAD63000E684F /* Frameworks */,
 				85C9F8042748E8B6000E684F /* Flutter */,
 				85C9F7C62748BFCB000E684F /* View */,
 				85C9F7C12748BF7B000E684F /* Controller */,
@@ -202,6 +230,8 @@
 		85C9F8032748E440000E684F /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
+				85C3DCF8275CB929005EABA3 /* JKFlutterEventTestVC.swift */,
+				85C3DCFA275CB9BB005EABA3 /* FlutterViewControllerGenerator.swift */,
 			);
 			path = Flutter;
 			sourceTree = "<group>";
@@ -216,6 +246,15 @@
 			path = Flutter;
 			sourceTree = "<group>";
 		};
+		85C9F843275CAD63000E684F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85C9F844275CAD63000E684F /* Flutter.framework */,
+				85C9F845275CAD63000E684F /* App.framework */,
+			);
+			path = Frameworks;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,7 +266,8 @@
 				5C2341AF268D711E006F9D11 /* Sources */,
 				5C2341B0268D711E006F9D11 /* Frameworks */,
 				5C2341B1268D711E006F9D11 /* Resources */,
-				37D04313688AF2B39F69C29E /* [CP] Embed Pods Frameworks */,
+				3FE32878A22073500ABE32E5 /* [CP] Embed Pods Frameworks */,
+				85C3DCF5275CB6E5005EABA3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,7 +344,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		37D04313688AF2B39F69C29E /* [CP] Embed Pods Frameworks */ = {
+		3FE32878A22073500ABE32E5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C3DCF9275CB929005EABA3 /* JKFlutterEventTestVC.swift in Sources */,
 				85C9F7EB2748C21A000E684F /* JKUserCenterVC.swift in Sources */,
 				85C9F7E82748C1FD000E684F /* JKHomeVC.swift in Sources */,
 				85C9F7E42748C1CF000E684F /* JKLoginVC.swift in Sources */,
@@ -334,6 +375,7 @@
 				85C9F8062748E945000E684F /* JKFlutterEngine.swift in Sources */,
 				85C9F7DD2748C0F8000E684F /* JKBaseVC.swift in Sources */,
 				85C9F7DA2748C0B4000E684F /* JKNavigationVC.swift in Sources */,
+				85C3DCFB275CB9BB005EABA3 /* FlutterViewControllerGenerator.swift in Sources */,
 				5C2341B7268D711E006F9D11 /* AppDelegate.swift in Sources */,
 				85C9F80C2748EB79000E684F /* JKFlutterAdapter.swift in Sources */,
 				85C9F7FE2748DBE0000E684F /* JKHomeTableCell.swift in Sources */,
@@ -467,7 +509,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K33FFF4L3X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "JKQuickApp-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,6 +523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jk.JKQuickApp-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -487,7 +536,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K33FFF4L3X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "JKQuickApp-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,6 +550,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jk.JKQuickApp-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
