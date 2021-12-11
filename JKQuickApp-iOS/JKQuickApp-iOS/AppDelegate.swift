@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabbarVC
         
         //flutter 相关测试代码
-        JKFlutterAdapter.shared.setupFlutterAdapter()
+        JKFlutterAdapter.shared.config()
         
         return true
     }

@@ -8,15 +8,26 @@
 import Foundation
 import Flutter
 
-class JKFlutterAdapter : NSObject {
+let JKFlutter_Channel_Message = "tech.1126.flutter/native_get"
+let JKFlutter_Channel_Event = "tech.1126.flutter/native_post"
+
+class JKFlutterAdapter : NSObject , FlutterStreamHandler {
     
     static let shared = JKFlutterAdapter()
     
-    lazy var flutterEngine = FlutterEngine(name: "jk_flutter_engine")
+    private var flutterVC : JKFlutterViewController?
+    
+    private var eventSink : FlutterEventSink?
+    
+    private var handler : FlutterMethodCallHandler?
+    
+    private var messageChannel : FlutterMethodChannel?
+    
+    private var eventChannel : FlutterEventChannel?
+    
+    private var flutterEngine : FlutterEngine?
+    
    
-    
-    private override init() {}
-    
     override func copy() -> Any {
         return self
     }
@@ -25,21 +36,81 @@ class JKFlutterAdapter : NSObject {
         return self
     }
     
+    
+    private override init() {
+        super.init()
+    }
+    
+    /// 配置相关信息
+    public func config() {
+        self.setupFlutterAdapter()
+    }
+    
     /// 安装flutter环境
-    public func setupFlutterAdapter() {
+    private func setupFlutterAdapter() {
         
-        flutterEngine.run()
+        //创建引擎
+        flutterEngine = FlutterEngine(name: "jk_flutter_engine")
+        
+        if let engine = flutterEngine , engine.run(withEntrypoint: nil) == true {
+            //创建VC
+            flutterVC = JKFlutterViewController(engine: engine, nibName: nil, bundle: nil)
+            
+            //创建接收消息渠道
+            messageChannel = FlutterMethodChannel(name: JKFlutter_Channel_Message, binaryMessenger: flutterVC as! FlutterBinaryMessenger)
+            messageChannel?.setMethodCallHandler {[weak self] (call, result) in
+                if let listenMessageCallResponse = self?.flutterVC?.listenMessageCallResponse,
+                   let listenMessageChannels = self?.flutterVC?.listenMessageChannels , listenMessageChannels.contains(call.method){
+                    listenMessageCallResponse(call,result)
+                }
+            }
+            
+            //创建发送消息渠道
+            eventChannel = FlutterEventChannel(name: JKFlutter_Channel_Event, binaryMessenger: flutterVC as! FlutterBinaryMessenger )
+            eventChannel?.setStreamHandler(self)
+        }
         
     }
     
     
-    /// 生成跳转Flutter的VC
-    /// - Returns: VC
-    public func generatorFlutterVC<T>(_ type:T.Type)  -> T  where T : FlutterViewController  {
-        let vc =
-            T(engine: flutterEngine, nibName: nil, bundle: nil)
-        return vc
+    func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
+        self.eventSink  = events
+        return nil;
+    }
+    
+    func onCancel(withArguments arguments: Any?) -> FlutterError? {
+        return nil;
     }
     
     
+    
+    
+}
+
+
+/// Flutter适配器相关公共API方法
+extension JKFlutterAdapter {
+    
+    public func getFlutterVC(pageId:String,pageCache:Bool = true) -> JKFlutterViewController? {
+        if let eventblock = eventSink , let vc = flutterVC {
+            vc.pageId = pageCache ? pageId : "\(pageId)_\(Int64(Date().timeIntervalSince1970))"
+            eventblock(vc.pageId)
+            return vc
+        }
+        return nil
+    }
+    
+    public func getFlutterVC(pageId:String,
+                             pageCache:Bool = true,
+                             listenMessageChannels:[String] = [],
+                             listenMessageCallResponse: @escaping FlutterMethodCallHandler ) -> JKFlutterViewController? {
+        if let eventblock = eventSink , let vc = flutterVC {
+            vc.pageId = pageCache ? pageId : "\(pageId)_\(Int64(Date().timeIntervalSince1970))"
+            eventblock(vc.pageId)
+            vc.listenMessageChannels = listenMessageChannels
+            vc.listenMessageCallResponse = listenMessageCallResponse
+            return vc
+        }
+        return nil
+    }
 }

@@ -12,6 +12,7 @@ import Flutter
 class JKHomeVC: JKBaseVC{
     
     var tableView:UITableView!
+    var hitCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +56,20 @@ extension JKHomeVC : UITableViewDataSource,UITableViewDelegate {
            cell = JKHomeTableCell(style: .subtitle, reuseIdentifier: cellid)
        }
         if let homeCell = cell as? JKHomeTableCell {
-            homeCell.infoLabel.text = "Flutter 工具\(indexPath.row+1)"
+            switch indexPath.row {
+            case 0:
+                homeCell.infoLabel.text = "Flutter&原生消息通信[带页面缓存]"
+                break
+            case 1:
+                homeCell.infoLabel.text = "Flutter&原生消息通信[不带页面缓存]"
+                break
+            case 2:
+                homeCell.infoLabel.text = "Flutter图片展示"
+                break
+            default:
+                homeCell.infoLabel.text = "Flutter 工具\(indexPath.row+1)"
+            }
+            
         }
       
         return cell ?? UITableViewCell()
@@ -66,8 +80,36 @@ extension JKHomeVC : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     
-        let flutterViewController = JKFlutterAdapter.shared.generatorFlutterVC(JKFlutterEventTestVC.self)
-        navigationController?.pushViewController(flutterViewController, animated: true)
+        switch indexPath.row {
+        case 0:
+            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "test_channel_page", listenMessageChannels: ["hitCount"], listenMessageCallResponse: { [weak self] (call, result) in
+                if call.method == "hitCount" {
+                    self?.hitCount += 1
+                    result(self?.hitCount)
+                }
+            }) {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+            break
+        case 1:
+            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "test_channel_page", pageCache: false, listenMessageChannels: ["hitCount"], listenMessageCallResponse: { [weak self] (call, result) in
+                if call.method == "hitCount" {
+                    self?.hitCount += 1
+                    result(self?.hitCount)
+                }
+            }) {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+            break
+        case 2:
+            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "test_image_page") {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+            break
+        default:
+           print("unknow do")
+        }
+        
+         
     }
 }

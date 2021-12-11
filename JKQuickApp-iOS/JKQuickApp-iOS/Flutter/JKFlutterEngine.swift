@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import Flutter
 
-class JKFlutterEngine : NSObject {
-    
+class JKFlutterEngine : FlutterEngine {
+    ///引擎名称
+    var engineName:String = "jk_default"
     
 }
