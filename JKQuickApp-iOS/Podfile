@@ -4,18 +4,16 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '10.0'
 
-install! 'cocoapods', :disable_input_output_paths => true
+#install! 'cocoapods', :disable_input_output_paths => true
 
 target 'JKQuickApp-iOS' do
   
   use_frameworks!
     
     pod 'SnapKit', '~> 5.0.1'
- # Json数据解析
-  #pod 'SwiftyJSON', '~> 4.0'
-
-  # Json转模型
-  #pod 'HandyJSON', '~> 5.0.2'
+    
+    # Flutter 产物库
+    pod 'JKFlutterKits/iOS', :path => '../../JKQuickFlutterKits/'
 
   
 end
