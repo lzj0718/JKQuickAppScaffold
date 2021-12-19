@@ -64,7 +64,10 @@ extension JKHomeVC : UITableViewDataSource,UITableViewDelegate {
                 homeCell.infoLabel.text = "Flutter&原生消息通信[不带页面缓存]"
                 break
             case 2:
-                homeCell.infoLabel.text = "Flutter图片展示"
+                homeCell.infoLabel.text = "Flutter-Tabbar页面"
+                break
+            case 3:
+                homeCell.infoLabel.text = "Flutter主页"
                 break
             default:
                 homeCell.infoLabel.text = "Flutter 工具\(indexPath.row+1)"
@@ -82,7 +85,7 @@ extension JKHomeVC : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "test_channel_page", listenMessageChannels: ["hitCount"], listenMessageCallResponse: { [weak self] (call, result) in
+            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "/test_channel", listenMessageChannels: ["hitCount"], listenMessageCallResponse: { [weak self] (call, result) in
                 if call.method == "hitCount" {
                     self?.hitCount += 1
                     result(self?.hitCount)
@@ -92,7 +95,7 @@ extension JKHomeVC : UITableViewDataSource,UITableViewDelegate {
             }
             break
         case 1:
-            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "test_channel_page", pageCache: false, listenMessageChannels: ["hitCount"], listenMessageCallResponse: { [weak self] (call, result) in
+            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "/test_channel", pageCache: false, listenMessageChannels: ["hitCount"], listenMessageCallResponse: { [weak self] (call, result) in
                 if call.method == "hitCount" {
                     self?.hitCount += 1
                     result(self?.hitCount)
@@ -102,11 +105,19 @@ extension JKHomeVC : UITableViewDataSource,UITableViewDelegate {
             }
             break
         case 2:
-            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "test_image_page") {
+            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "/tarbar") {
+                navigationController?.pushViewController(vc, animated: true)
+            }
+            break
+        case 3:
+            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "/home") {
                 navigationController?.pushViewController(vc, animated: true)
             }
             break
         default:
+            if let vc = JKFlutterAdapter.shared.getFlutterVC(pageId: "/placeholder") {
+                navigationController?.pushViewController(vc, animated: true)
+            }
            print("unknow do")
         }
         

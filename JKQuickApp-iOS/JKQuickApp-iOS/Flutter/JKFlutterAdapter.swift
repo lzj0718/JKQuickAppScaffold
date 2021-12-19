@@ -7,6 +7,7 @@
 
 import Foundation
 import Flutter
+import FlutterPluginRegistrant
 
 let JKFlutter_Channel_Message = "tech.1126.flutter/native_get"
 let JKFlutter_Channel_Event = "tech.1126.flutter/native_post"
@@ -42,7 +43,10 @@ class JKFlutterAdapter : NSObject , FlutterStreamHandler {
     }
     
     /// 配置相关信息
-    public func config() {
+    public func config(pluginRegister:FlutterPluginRegistry) {
+        //插件注册
+        GeneratedPluginRegistrant.register(with: pluginRegister)
+        //安装适配器
         self.setupFlutterAdapter()
     }
     
@@ -53,12 +57,19 @@ class JKFlutterAdapter : NSObject , FlutterStreamHandler {
         flutterEngine = FlutterEngine(name: "jk_flutter_engine")
         
         if let engine = flutterEngine , engine.run(withEntrypoint: nil) == true {
+           
             //创建VC
             flutterVC = JKFlutterViewController(engine: engine, nibName: nil, bundle: nil)
             
             //创建接收消息渠道
             messageChannel = FlutterMethodChannel(name: JKFlutter_Channel_Message, binaryMessenger: flutterVC as! FlutterBinaryMessenger)
             messageChannel?.setMethodCallHandler {[weak self] (call, result) in
+                print("call = \(call.method)")
+                if call.method == "naviToBack" {
+                    //返回原生
+                    self?.flutterVC?.navigationController?.popViewController(animated: true)
+                    return
+                }
                 if let listenMessageCallResponse = self?.flutterVC?.listenMessageCallResponse,
                    let listenMessageChannels = self?.flutterVC?.listenMessageChannels , listenMessageChannels.contains(call.method){
                     listenMessageCallResponse(call,result)
@@ -93,7 +104,7 @@ extension JKFlutterAdapter {
     
     public func getFlutterVC(pageId:String,pageCache:Bool = true) -> JKFlutterViewController? {
         if let eventblock = eventSink , let vc = flutterVC {
-            vc.pageId = pageCache ? pageId : "\(pageId)_\(Int64(Date().timeIntervalSince1970))"
+            vc.pageId = pageId//pageCache ? pageId : "\(pageId)_\(Int64(Date().timeIntervalSince1970))"
             eventblock(vc.pageId)
             return vc
         }
@@ -105,7 +116,7 @@ extension JKFlutterAdapter {
                              listenMessageChannels:[String] = [],
                              listenMessageCallResponse: @escaping FlutterMethodCallHandler ) -> JKFlutterViewController? {
         if let eventblock = eventSink , let vc = flutterVC {
-            vc.pageId = pageCache ? pageId : "\(pageId)_\(Int64(Date().timeIntervalSince1970))"
+            vc.pageId = pageId//pageCache ? pageId : "\(pageId)_\(Int64(Date().timeIntervalSince1970))"
             eventblock(vc.pageId)
             vc.listenMessageChannels = listenMessageChannels
             vc.listenMessageCallResponse = listenMessageCallResponse

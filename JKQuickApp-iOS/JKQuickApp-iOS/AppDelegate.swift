@@ -7,14 +7,16 @@
 
 import UIKit
 import Flutter
+import FlutterPluginRegistrant
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+//class AppDelegate: UIResponder,UIApplicationDelegate {
+//
+//    var window : UIWindow?
 
-    var window : UIWindow?
-    
+class AppDelegate: FlutterAppDelegate {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
@@ -25,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabbarVC
         
         //flutter 相关测试代码
-        JKFlutterAdapter.shared.config()
+        JKFlutterAdapter.shared.config(pluginRegister: self)
         
         return true
     }
