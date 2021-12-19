@@ -34,8 +34,6 @@ class JKFlutterViewController : FlutterViewController {
         super.viewWillAppear(animated)
         //隐藏原来导航
         navigationController?.navigationBar.isHidden = true
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

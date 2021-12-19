@@ -65,11 +65,27 @@ class JKFlutterAdapter : NSObject , FlutterStreamHandler {
             messageChannel = FlutterMethodChannel(name: JKFlutter_Channel_Message, binaryMessenger: flutterVC as! FlutterBinaryMessenger)
             messageChannel?.setMethodCallHandler {[weak self] (call, result) in
                 print("call = \(call.method)")
-                if call.method == "naviToBack" {
+                //先处理全局事件
+                switch call.method {
+                case JKFlutterMethodCallName.naviToBackNative:
+                    //开启原生导航右滑返回手势
+                    self?.flutterVC?.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
                     //返回原生
                     self?.flutterVC?.navigationController?.popViewController(animated: true)
                     return
+                case JKFlutterMethodCallName.enablePopGestureRecognizer:
+                    //开启原生导航右滑返回手势
+                    self?.flutterVC?.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+                    return
+                case JKFlutterMethodCallName.disablePopGestureRecognizer:
+                    //屏蔽原生导航右滑返回手势
+                    self?.flutterVC?.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+                    return
+                default:
+                    print("unmatch \(call.method)")
+                    break
                 }
+                //未匹配全局事件，则传递给界面
                 if let listenMessageCallResponse = self?.flutterVC?.listenMessageCallResponse,
                    let listenMessageChannels = self?.flutterVC?.listenMessageChannels , listenMessageChannels.contains(call.method){
                     listenMessageCallResponse(call,result)

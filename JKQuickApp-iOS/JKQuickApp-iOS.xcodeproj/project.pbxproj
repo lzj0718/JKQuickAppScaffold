@@ -10,6 +10,7 @@
 		48419F548F4FFC21F5426FBB /* Pods_JKQuickApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996D4719F2A393F2D8679114 /* Pods_JKQuickApp_iOS.framework */; };
 		5C2341B7268D711E006F9D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2341B6268D711E006F9D11 /* AppDelegate.swift */; };
 		5C2341C0268D7120006F9D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2341BF268D7120006F9D11 /* Assets.xcassets */; };
+		85475C52276F5357004A708A /* JKFlutterMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85475C51276F5357004A708A /* JKFlutterMacro.swift */; };
 		857836CA2765CD140078179A /* JKFlutterNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857836C92765CD140078179A /* JKFlutterNavigationView.swift */; };
 		857836CC2765D2170078179A /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857836CB2765D2170078179A /* Global.swift */; };
 		85C3DD02275D0795005EABA3 /* JKFlutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C3DD01275D0795005EABA3 /* JKFlutterViewController.swift */; };
@@ -42,6 +43,7 @@
 		5C2341B6268D711E006F9D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C2341BF268D7120006F9D11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2341C4268D7120006F9D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85475C51276F5357004A708A /* JKFlutterMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterMacro.swift; sourceTree = "<group>"; };
 		857836C92765CD140078179A /* JKFlutterNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterNavigationView.swift; sourceTree = "<group>"; };
 		857836CB2765D2170078179A /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		85C3DD01275D0795005EABA3 /* JKFlutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFlutterViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				85C9F80B2748EB79000E684F /* JKFlutterAdapter.swift */,
 				85C3DD01275D0795005EABA3 /* JKFlutterViewController.swift */,
 				857836C92765CD140078179A /* JKFlutterNavigationView.swift */,
+				85475C51276F5357004A708A /* JKFlutterMacro.swift */,
 			);
 			path = Flutter;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				85C9F7E82748C1FD000E684F /* JKHomeVC.swift in Sources */,
 				85C9F7E42748C1CF000E684F /* JKLoginVC.swift in Sources */,
 				85C9F7D92748C0B4000E684F /* JKTabbarVC.swift in Sources */,
+				85475C52276F5357004A708A /* JKFlutterMacro.swift in Sources */,
 				85C9F7F82748D5C4000E684F /* JKLoadingView.swift in Sources */,
 				857836CC2765D2170078179A /* Global.swift in Sources */,
 				85C9F7DD2748C0F8000E684F /* JKBaseVC.swift in Sources */,
