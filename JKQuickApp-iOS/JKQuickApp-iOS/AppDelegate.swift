@@ -27,7 +27,7 @@ class AppDelegate: FlutterAppDelegate {
         window?.rootViewController = tabbarVC
         
         //flutter 相关测试代码
-        JKFlutterAdapter.shared.config(pluginRegister: self)
+        JKFlutterAdapter.shared.config()
         
         return true
     }

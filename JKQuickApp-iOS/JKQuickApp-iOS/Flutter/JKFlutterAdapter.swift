@@ -43,9 +43,8 @@ class JKFlutterAdapter : NSObject , FlutterStreamHandler {
     }
     
     /// 配置相关信息
-    public func config(pluginRegister:FlutterPluginRegistry) {
-        //插件注册
-        GeneratedPluginRegistrant.register(with: pluginRegister)
+    public func config() {
+        
         //安装适配器
         self.setupFlutterAdapter()
     }
@@ -58,6 +57,9 @@ class JKFlutterAdapter : NSObject , FlutterStreamHandler {
         
         if let engine = flutterEngine , engine.run(withEntrypoint: nil) == true {
            
+            //插件注册
+            GeneratedPluginRegistrant.register(with: engine)
+            
             //创建VC
             flutterVC = JKFlutterViewController(engine: engine, nibName: nil, bundle: nil)
             
