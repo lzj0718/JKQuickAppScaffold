@@ -56,5 +56,25 @@
       <option name="name" value="maven3" />
       <option name="url" value="file:$PROJECT_DIR$/app/JKQuickApp-Android/local-repo" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="file:$PROJECT_DIR$/$%7BHOME%7D/local-repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="file:$PROJECT_DIR$/app/$%7BHOME%7D/local-repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="file:$PROJECT_DIR$/$%7Bproject.rootProject.path%7D/local-repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven3" />
+      <option name="name" value="maven3" />
+      <option name="url" value="file:$PROJECT_DIR$/app/$%7Bproject.rootProject.path%7D/local-repo" />
+    </remote-repository>
   </component>
 </project>

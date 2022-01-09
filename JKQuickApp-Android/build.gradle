@@ -37,7 +37,7 @@ allprojects {
             url "https://storage.flutter-io.cn/download.flutter.io"
         }
         maven {
-            url '/Users/jacky/Documents/HibridNativeAndFlutter/JKQuickAppScaffold/JKQuickApp-Android/local-repo'
+            url properties.getProperty("LOCAL_MAVEN_REPO")
         }
 
     }
