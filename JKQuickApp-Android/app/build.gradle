@@ -43,9 +43,9 @@ android {
 
 repositories {
     //Gradle升级4.2.2 下面删掉
-    flatDir {
-        dirs 'libs'
-    }
+//    flatDir {
+//        dirs 'libs'
+//    }
 }
 dependencies {
     //引入本地jar

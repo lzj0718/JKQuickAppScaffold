@@ -1,5 +1,6 @@
 package com.xe.jkapp.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import androidx.navigation.Navigation;
 
 import com.xe.jkapp.R;
 import com.xe.jkapp.databinding.FragmentHomeBinding;
+import com.xe.jkapp.ui.flutter.JKFlutterActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -37,13 +39,26 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
-        binding.goSecondBtn.setOnClickListener(new Button.OnClickListener(){
+        binding.goSecondBtn.setOnClickListener(new Button.OnClickListener() {
 
-            public void onClick(View v) { //使用匿名的Button实例
-                Navigation.findNavController(v).navigate(R.id.action_second_page);
-            } }
-        ) ;
+                                                   public void onClick(View v) { //使用匿名的Button实例
+                                                       Bundle paramBundle = new Bundle();
+                                                       paramBundle.putString("param1", "测试param1");
+                                                       paramBundle.putString("param2", "测试param2");
+                                                       Navigation.findNavController(v).navigate(R.id.action_second_page, paramBundle);
+//                Navigation.findNavController(v).navigate(R.id.action_second_page);
+                                                   }
+                                               }
+        );
 
+        binding.goFlutterHomePage.setOnClickListener(new Button.OnClickListener() {
+
+                                                         public void onClick(View v) { //使用匿名的Button实例
+//                                                             startActivity(new Intent(getActivity(),JKFlutterActivity.class));
+                                                             Navigation.findNavController(v).navigate(R.id.action_flutter_home_page);
+                                                         }
+                                                     }
+        );
         return root;
     }
 

@@ -17,6 +17,18 @@
             app:popEnterAnim="@anim/slide_left_in"
             app:popExitAnim="@anim/slide_right_out"
             app:destination="@id/action_second_pagefragment"></action>
+        <action android:id="@+id/action_flutter_home_page"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out"
+            app:destination="@id/action_flutter_home_pagefragment"></action>
+    </fragment>
+
+    <fragment android:id="@+id/action_flutter_home_pagefragment"
+        android:name="com.xe.jkapp.ui.home.FlutterHomeFragment"
+        android:label="Flutter主页"
+        tools:layout="@layout/flutter_home_fragment">
     </fragment>
 
     <!--    首页-第二个页面-->

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JKApp">
         <activity
+            android:name=".ui.flutter.JKFlutterActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
@@ -19,4 +22,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

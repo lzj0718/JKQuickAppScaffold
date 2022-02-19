@@ -7,8 +7,13 @@
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.18125" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.18125" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/activity_jkflutter.xml" value="0.11822916666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16510416666666666" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_flutter_home_page.xml" value="0.20697463768115942" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16510416666666666" />
+        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_second_page.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.16510416666666666" />
       </map>
     </option>
